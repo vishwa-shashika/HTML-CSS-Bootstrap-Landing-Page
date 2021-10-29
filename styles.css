@@ -1,0 +1,187 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+body {
+  /* position: relative; */
+}
+.navigation {
+  background-color: #898e8f;
+  height: 60px;
+}
+
+.navigation .nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  margin: 0 4rem;
+}
+
+.nav-links {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  color: white;
+  font-size: 1rem;
+  font-weight: 200;
+}
+
+.nav-links li {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 1rem;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav-links .active {
+  background-color: #759199;
+}
+
+.nav-links li:hover {
+  background-color: #759199;
+}
+
+.nav-wrapper select {
+  padding: 0.2rem 1rem;
+  width: 200px;
+
+  appearance: none;
+  background: white url(./img/arrow.png) no-repeat;
+  background-size: 12px;
+  background-position: calc(100% - 15px) center;
+  border: none;
+}
+
+.hero-section {
+  height: 65vh;
+  background-image: url(./img/hero.png);
+  background-size: cover;
+  background-position: top;
+  position: relative;
+}
+
+.welcome-box {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 2rem 4rem;
+  color: white;
+  font-family: serif;
+  letter-spacing: 0.2rem;
+}
+
+.welcome-box h2 {
+  font-size: 3rem;
+}
+
+.welcome-box h3 {
+  color: #fc8048;
+  font-size: 1.5rem;
+}
+
+/* Bootstrap Grid Styles */
+.grid-head {
+  margin-top: 8rem;
+}
+.grid-head h2 {
+  font-size: 3em;
+  color: #bf5e34;
+  overflow-y: hidden;
+}
+
+.grid-pic {
+  height: auto;
+  width: 100%;
+}
+
+.card-text-head {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin-top: 5rem;
+  color: azure;
+  letter-spacing: 0.1rem;
+}
+
+/* =========Language Select ================*/
+
+.select-box {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+
+  position: absolute;
+  justify-content: center;
+  top: 10px;
+  right: 4rem;
+  z-index: 20;
+}
+
+.select-box .options-container {
+  background-color: white;
+  max-height: 0;
+  opacity: 100;
+  width: 100%;
+  transition: all 0.2s;
+  overflow: hidden;
+  order: 1;
+}
+
+.selected {
+  background-color: white;
+  order: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.selected::after {
+  content: "";
+  background: url(./img/arrow.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  height: 100%;
+  width: 15px;
+  right: 10px;
+  top: 15px;
+}
+
+.select-box .options-container.lang-active {
+  max-height: 250px;
+}
+
+.select-box .option,
+.selected {
+  padding: 0.4rem 1rem;
+  cursor: pointer;
+}
+
+.select-box .option:hover {
+  background-color: #ff6357;
+}
+
+.select-box label {
+  cursor: pointer;
+}
+.select-box .option .radio {
+  display: none;
+}
